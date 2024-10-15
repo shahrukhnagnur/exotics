@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './navbar';
+import Home from './home.jsx';
+import Headphone from './headphone.jsx';
+import Earbuds from './earbuds.jsx';
+import Products from './products.jsx';
+import Neckbands from './neckbands.jsx';
+import Loginpage from './loginpage.jsx';
+import Signup from './signup.jsx';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/headphone' element={<Headphone />} />
+          <Route path='/neckbands' element={<Neckbands />} />
+          <Route path='/earbuds' element={<Earbuds />} />
+          <Route path="/product/:id" element={<Products/>}/>
+          <Route path='/loginpage' element={<Loginpage />} />
+          <Route path='/signup' element={<Signup />} />
+        </Routes>
+      </Router>
+    </React.Fragment>
   );
 }
 

@@ -1,0 +1,52 @@
+.custom-carousel {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-carousel .carousel-inner {
+    height: 100%;
+}
+
+.custom-carousel-item {
+    height: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 100%;
+    padding: 0  200px 20px 20px; 
+}
+
+.custom-img {
+    max-height: 800px; 
+    width: auto;
+    margin-left: auto; 
+}
+
+.carousel-caption {
+    text-align: left;
+    margin-left: 20px;
+    max-width: 35%;
+    position: absolute;
+    top: 200px;
+}
+
+.carousel-caption h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    color: #666;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}

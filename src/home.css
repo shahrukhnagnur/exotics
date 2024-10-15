@@ -1,0 +1,80 @@
+.carousel-image-overlay {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .carousel-image {
+        height: 600px;
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+    }
+    
+    .carousel-image-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1; 
+    }
+    
+    .carousel-caption {
+        position: absolute;
+        z-index: 2; 
+        color: #fff;
+        text-align: center;
+    }
+
+#experience-div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 100px;
+}
+
+
+#experience-div h1{
+    color: #2e2e2e;
+}
+
+.partners-heading {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px; /* Adds space between the heading and logos */
+}
+
+.logo-wrapper {
+    background-color: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Set a fixed width for all logos */
+    height: 150px; /* Set a fixed height for all logos */
+}
+
+.partner-logo {
+    max-width: 100%; /* Ensures logos scale within the width of the container */
+    max-height: 100%; /* Ensures logos fit within the container without distortion */
+    object-fit: contain;
+}
+
+.row .d-flex {
+    flex-wrap: wrap; /* Ensures wrapping for responsiveness */
+}
+
+@media (max-width: 768px) {
+    .logo-wrapper {
+        width: 120px;
+        height: 120px; /* Adjust logo size for smaller screens */
+    }
+}
+
+
